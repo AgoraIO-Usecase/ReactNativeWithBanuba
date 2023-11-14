@@ -101,11 +101,24 @@ android {
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
     }
+    sourceSets {
+        main {
+            assets.srcDirs = ['../../ios/assets']
+        }
+    }
 }
 
 dependencies {
     // The version of react-native is set by the React Native Gradle Plugin
     implementation("com.facebook.react:react-android")
+
+    // Banuba Face AR dependency for playing AR effects
+    def banubaSdkVersion = "1.7.0"
+    implementation "com.banuba.sdk:sdk_core:${banubaSdkVersion}"
+    implementation "com.banuba.sdk:banuba_sdk_resources:${banubaSdkVersion}"
+
+    // Banuba extension for Agora
+    implementation 'com.banuba.sdk.android:agora-extension:1.2.0'
 
     debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}")
     debugImplementation("com.facebook.flipper:flipper-network-plugin:${FLIPPER_VERSION}") {

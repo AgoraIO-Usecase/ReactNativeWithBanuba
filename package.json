@@ -12,7 +12,9 @@
   "dependencies": {
     "react": "18.2.0",
     "react-native": "0.72.6",
-    "react-native-agora": "^4.2.5"
+    "react-native-agora": "^4.2.5",
+    "react-native-fs": "^2.20.0",
+    "use-async-effect": "^2.2.7"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
